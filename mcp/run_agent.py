@@ -21,7 +21,7 @@ async def main():
     if not tools:
         raise RuntimeError("Failed to connect to MCP server")
 
-    model = ChatGoogleGenerativeAI(model="gemini-1.5-flash")
+    model = ChatGoogleGenerativeAI(model="gemini-2.5-flash")
     agent = create_react_agent(model, tools)
 
     resp1 = await agent.ainvoke({"messages": "Reverse the string 'hello world'"})
